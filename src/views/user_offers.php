@@ -1,5 +1,6 @@
 <?php
   include(BASE_DIR . "/src/models/offer.php");
+  
   $user = isset($_GET['user']) ? findUser($_GET['user']) : $current_user;
   if (!$user) $user = $current_user;
   
@@ -7,12 +8,12 @@
 ?>
 <div class="row">
   <div class="col-md-12">
-    <h1>Propositions de <?= $user['name'] ?></h1>
+    <h1>Propositions de <?= htmlspecialchars($user['name']) ?></h1>
     <div class="row">
     <?php foreach (findUserOffers($user['username']) as $id => $offer): ?>
       <div class="col-md-3 col-sm-4 col-xs-6">
         <div class="thumbnail offer-item">
-          <a href="<?= BASE_URL;?>?page=<?= $detail_page ?>&id=<?= $id ?>"><img class="img-responsive" src="<?= $offer['images'][0] ?>" /></a>
+          <a href="<?= BASE_URL;?>?page=<?= $detail_page ?>&id=<?= $id ?>"><img class="img-responsive" src="<?= htmlspecialchars($offer['images'][0]) ?>" /></a>
           <div class="caption text-center">
             <h3>Dès le <span class="available_date"><?= $offer['available_on'] ?></span></h3>
             <?php if ($user == $current_user): ?>

@@ -2,7 +2,7 @@
   <div class="form-group <?= isset($available_on_error) ? 'has-error' : '' ?>">
     <label for="available_on" class="col-sm-2 control-label">Disponible dès le</label>
     <div class="col-sm-10">
-      <input type="date" class="form-control" id="available_on" name="available_on" placeholder="" value="<?= $offer['available_on'] ?>">
+      <input type="date" class="form-control" id="available_on" name="available_on" placeholder="" value="<?= htmlspecialchars($offer['available_on'] )?>">
       <?php if (isset($available_on_error)): ?>
         <span class="help-block"><?= $available_on_error ?></span>
       <?php endif; ?>
@@ -11,7 +11,7 @@
   <div class="form-group <?= isset($address_error) ? 'has-error' : '' ?>">
     <label for="address" class="col-sm-2 control-label">Localisation</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="address" name="address" placeholder="Adresse du bien" value="<?= $offer['address'] ?>">
+      <input type="text" class="form-control" id="address" name="address" placeholder="Adresse du bien" value="<?= htmlspecialchars($offer['address']) ?>">
       <?php if (isset($address_error)): ?>
         <span class="help-block"><?= $address_error ?></span>
       <?php endif; ?>
@@ -20,7 +20,7 @@
   <div class="form-group <?= isset($description_error) ? 'has-error' : '' ?>">
     <label for="description" class="col-sm-2 control-label">Description</label>
     <div class="col-sm-10">
-      <textarea class="form-control" id="description" name="description" rows="4"><?= $offer['description'] ?></textarea>
+      <textarea class="form-control" id="description" name="description" rows="4"><?= htmlspecialchars($offer['description']) ?></textarea>
       <?php if (isset($description_error)): ?>
         <span class="help-block"><?= $description_error ?></span>
       <?php endif; ?>

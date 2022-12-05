@@ -7,9 +7,9 @@
     <?php foreach ($offer['images'] as $image): ?>
       <div class="col-md-2 col-sm-3 col-xs-4">
         <div class="thumbnail image-item">
-          <img class="img-responsive" src="<?= $image ?>" />
-          <form class="caption text-center" action="<?= BASE_URL;?>?page=destroy_image&id=<?= $offer_id ?>&image=<?= $image ?>" method="POST">
-          <button type="submit" class="btn btn-danger" <?= count($offer['images']) == 1 ? 'disabled="disabled"' : '' ?>>Supprimer</button>
+          <img class="img-responsive" src="<?= htmlspecialchars($image) ?>" />
+          <form class="caption text-center" action="<?= BASE_URL;?>?page=destroy_image&id=<?= $offer_id ?>&image=<?= htmlspecialchars($image) ?>" method="POST">
+          <button type="submit" class="btn btn-danger" <?= count(htmlspecialchars($offer['images'])) == 1 ? 'disabled="disabled"' : '' ?>>Supprimer</button>
           </form>
         </div>
       </div>

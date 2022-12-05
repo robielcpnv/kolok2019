@@ -32,13 +32,13 @@
         <ul class="nav navbar-nav">
           <li><a href="<?= BASE_URL;?>?page=offers"><span class="glyphicon glyphicon-list"></span> Toutes les propositions</a></li>
           <?php if ($current_user): ?>
-            <li><a href="<?= BASE_URL;?>?page=user_offers&user=<?= $current_user['username'] ?>"><span class="glyphicon glyphicon-star"></span> Mes propositions</a></li>
+            <li><a href="<?= BASE_URL;?>?page=user_offers&user=<?= htmlspecialchars($current_user['username']) ?>"><span class="glyphicon glyphicon-star"></span> Mes propositions</a></li>
             <li><a href="<?= BASE_URL;?>?page=create_offer"><span class="glyphicon glyphicon-plus-sign"></span> Ajouter une proposition</a></li>
           <?php endif; ?>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <?php if ($current_user): ?>
-            <li><div class="navbar-text"><span class="glyphicon glyphicon-user"></span> <?= $current_user['name']; ?></div></li>
+            <li><div class="navbar-text"><span class="glyphicon glyphicon-user"></span> <?= htmlspecialchars($current_user['username']) ?></div></li>
             <li><a href="<?= BASE_URL;?>?page=logout" class="btn"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
           <?php else: ?>
             <li><a href="<?= BASE_URL;?>?page=register" class="btn"><span class="glyphicon glyphicon-user"></span> S'enregistrer</a></li>

@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-md-6">
-    <h1><?= $offer['available_on'] ?></h1>
+    <h1><?= htmlspecialchars($offer['available_on']) ?></h1>
     <div class="panel panel-default">
       <div class="panel-body infos">
-        <span><span class="glyphicon glyphicon-map-marker"></span> <?= $offer['address'] ?></span>
-        <span class="pull-right"><span class="glyphicon glyphicon-user"></span> <a href="<?= BASE_URL;?>?page=user_offers&user=<?= $offer['author_username'] ?>"><?= $offer['author_username'] ?></a></span>
+        <span><span class="glyphicon glyphicon-map-marker"></span> <?= htmlspecialchars($offer['address']) ?></span>
+        <span class="pull-right"><span class="glyphicon glyphicon-user"></span> <a href="<?= BASE_URL;?>?page=user_offers&user=<?= htmlspecialchars($offer['author_username']) ?>"><?= htmlspecialchars() ?></a></span>
       </div>
     </div>
-    <p class="description lead bg-info alert"><?= nl2br($offer['description']) ?></p>
+    <p class="description lead bg-info alert"><?= htmlspecialchars(nl2br($offer['description'])) ?></p>
   </div>
   <div class="col-md-6">
     <h2>Contacter l'auteur</h2>
@@ -23,8 +23,8 @@
 </div>
 <div class="row">
   <?php foreach ($offer['images'] as $image): ?>
-    <a href="<?= $image ?>" data-toggle="lightbox" data-gallery="offer-gallery" class="col-md-2 col-sm-3 col-xs-4">
-      <img class="img-responsive img-thumbnail" src="<?= $image ?>" />
+    <a href="<?= htmlspecialchars($image) ?>" data-toggle="lightbox" data-gallery="offer-gallery" class="col-md-2 col-sm-3 col-xs-4">
+      <img class="img-responsive img-thumbnail" src="<?= htmlspecialchars($image) ?>" />
     </a>
   <?php endforeach; ?>
 </div>
