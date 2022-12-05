@@ -1,0 +1,186 @@
+Overall summary:
+  Final result:                  Passed
+  Exit code (Decimal):           0
+  Start time:                    2022-11-15 08:47:25
+  End time:                      2022-11-15 08:52:39
+  Requested action:              Install
+
+Machine Properties:
+  Machine name:                  SC-C333-PC15
+  Machine processor count:       12
+  OS version:                    Microsoft Windows 10 Éducation (10.0.19044)
+  OS service pack:               
+  OS region:                     United States
+  OS language:                   français (France)
+  OS architecture:               x64
+  Process architecture:          64 Bit
+  OS clustered:                  No
+
+Product features discovered:
+  Product              Instance             Instance ID                    Feature                                  Language             Edition              Version         Clustered  Configured
+
+Package properties:
+  Description:                   Microsoft SQL Server 2019 
+  ProductName:                   SQL Server 2019
+  Type:                          RTM
+  Version:                       15
+  SPLevel:                       0
+  Installation location:         E:\x64\setup\
+  Installation edition:          Developer
+
+Product Update Status:
+  None discovered.
+
+User Input Settings:
+  ACTION:                        Install
+  ADDCURRENTUSERASSQLADMIN:      false
+  AGTSVCACCOUNT:                 NT Service\SQLSERVERAGENT
+  AGTSVCPASSWORD:                *****
+  AGTSVCSTARTUPTYPE:             Manual
+  ASBACKUPDIR:                   Backup
+  ASCOLLATION:                   Latin1_General_CI_AS
+  ASCONFIGDIR:                   Config
+  ASDATADIR:                     Data
+  ASLOGDIR:                      Log
+  ASPROVIDERMSOLAP:              1
+  ASSERVERMODE:                  TABULAR
+  ASSVCACCOUNT:                  <empty>
+  ASSVCPASSWORD:                 <empty>
+  ASSVCSTARTUPTYPE:              Automatic
+  ASSYSADMINACCOUNTS:            <empty>
+  ASTELSVCACCT:                  <empty>
+  ASTELSVCPASSWORD:              <empty>
+  ASTELSVCSTARTUPTYPE:           0
+  ASTEMPDIR:                     Temp
+  BROWSERSVCSTARTUPTYPE:         Disabled
+  CLTCTLRNAME:                   <empty>
+  CLTRESULTDIR:                  <empty>
+  CLTSTARTUPTYPE:                0
+  CLTSVCACCOUNT:                 <empty>
+  CLTSVCPASSWORD:                <empty>
+  CLTWORKINGDIR:                 <empty>
+  COMMFABRICENCRYPTION:          0
+  COMMFABRICNETWORKLEVEL:        0
+  COMMFABRICPORT:                0
+  CONFIGURATIONFILE:             C:\Program Files\Microsoft SQL Server\150\Setup Bootstrap\Log\20221115_084653\ConfigurationFile.ini
+  CTLRSTARTUPTYPE:               0
+  CTLRSVCACCOUNT:                <empty>
+  CTLRSVCPASSWORD:               <empty>
+  CTLRUSERS:                     <empty>
+  ENABLERANU:                    false
+  ENU:                           true
+  EXTSVCACCOUNT:                 <empty>
+  EXTSVCPASSWORD:                <empty>
+  FEATURES:                      SQLENGINE, CONN
+  FILESTREAMLEVEL:               0
+  FILESTREAMSHARENAME:           <empty>
+  FTSVCACCOUNT:                  <empty>
+  FTSVCPASSWORD:                 <empty>
+  HELP:                          false
+  IACCEPTPYTHONLICENSETERMS:     false
+  IACCEPTROPENLICENSETERMS:      false
+  IACKNOWLEDGEENTCALLIMITS:      false
+  INDICATEPROGRESS:              false
+  INSTALLSHAREDDIR:              C:\Program Files\Microsoft SQL Server\
+  INSTALLSHAREDWOWDIR:           C:\Program Files (x86)\Microsoft SQL Server\
+  INSTALLSQLDATADIR:             <empty>
+  INSTANCEDIR:                   C:\Program Files\Microsoft SQL Server\
+  INSTANCEID:                    MSSQLSERVER
+  INSTANCENAME:                  MSSQLSERVER
+  ISMASTERSVCACCOUNT:            NT AUTHORITY\Network Service
+  ISMASTERSVCPASSWORD:           <empty>
+  ISMASTERSVCPORT:               8391
+  ISMASTERSVCSSLCERTCN:          <empty>
+  ISMASTERSVCSTARTUPTYPE:        Automatic
+  ISMASTERSVCTHUMBPRINT:         <empty>
+  ISSVCACCOUNT:                  NT AUTHORITY\Network Service
+  ISSVCPASSWORD:                 <empty>
+  ISSVCSTARTUPTYPE:              Automatic
+  ISTELSVCACCT:                  <empty>
+  ISTELSVCPASSWORD:              <empty>
+  ISTELSVCSTARTUPTYPE:           0
+  ISWORKERSVCACCOUNT:            NT AUTHORITY\Network Service
+  ISWORKERSVCCERT:               <empty>
+  ISWORKERSVCMASTER:             <empty>
+  ISWORKERSVCPASSWORD:           <empty>
+  ISWORKERSVCSTARTUPTYPE:        Automatic
+  MATRIXCMBRICKCOMMPORT:         0
+  MATRIXCMSERVERNAME:            <empty>
+  MATRIXNAME:                    <empty>
+  MRCACHEDIRECTORY:              
+  NPENABLED:                     0
+  PBDMSSVCACCOUNT:               <empty>
+  PBDMSSVCPASSWORD:              <empty>
+  PBDMSSVCSTARTUPTYPE:           0
+  PBENGSVCACCOUNT:               <empty>
+  PBENGSVCPASSWORD:              <empty>
+  PBENGSVCSTARTUPTYPE:           0
+  PBPORTRANGE:                   <empty>
+  PBSCALEOUT:                    false
+  PID:                           *****
+  QUIET:                         false
+  QUIETSIMPLE:                   false
+  ROLE:                          
+  RSINSTALLMODE:                 DefaultNativeMode
+  RSSVCACCOUNT:                  <empty>
+  RSSVCPASSWORD:                 <empty>
+  RSSVCSTARTUPTYPE:              Automatic
+  SAPWD:                         *****
+  SECURITYMODE:                  SQL
+  SQLBACKUPDIR:                  <empty>
+  SQLCOLLATION:                  French_CI_AS
+  SQLJAVADIR:                    <empty>
+  SQLMAXDOP:                     12
+  SQLMAXMEMORY:                  2147483647
+  SQLMINMEMORY:                  0
+  SQLSVCACCOUNT:                 NT Service\MSSQLSERVER
+  SQLSVCINSTANTFILEINIT:         false
+  SQLSVCPASSWORD:                <empty>
+  SQLSVCSTARTUPTYPE:             Automatic
+  SQLSYSADMINACCOUNTS:           CPNV\Robiel.TESFAZGHI
+  SQLTELSVCACCT:                 NT Service\SQLTELEMETRY
+  SQLTELSVCPASSWORD:             <empty>
+  SQLTELSVCSTARTUPTYPE:          Automatic
+  SQLTEMPDBDIR:                  <empty>
+  SQLTEMPDBFILECOUNT:            8
+  SQLTEMPDBFILEGROWTH:           64
+  SQLTEMPDBFILESIZE:             8
+  SQLTEMPDBLOGDIR:               <empty>
+  SQLTEMPDBLOGFILEGROWTH:        64
+  SQLTEMPDBLOGFILESIZE:          8
+  SQLUSERDBDIR:                  <empty>
+  SQLUSERDBLOGDIR:               <empty>
+  SUPPRESSPAIDEDITIONNOTICE:     false
+  SUPPRESSPRIVACYSTATEMENTNOTICE: false
+  TCPENABLED:                    0
+  UIMODE:                        Normal
+  UpdateEnabled:                 true
+  UpdateSource:                  MU
+  USEMICROSOFTUPDATE:            false
+  USESQLRECOMMENDEDMEMORYLIMITS: false
+  X86:                           false
+
+  Configuration file:            C:\Program Files\Microsoft SQL Server\150\Setup Bootstrap\Log\20221115_084653\ConfigurationFile.ini
+
+Detailed results:
+  Feature:                       Database Engine Services
+  Status:                        Passed
+
+  Feature:                       SQL Browser
+  Status:                        Passed
+
+  Feature:                       SQL Writer
+  Status:                        Passed
+
+  Feature:                       Client Tools Connectivity
+  Status:                        Passed
+
+  Feature:                       SQL Client Connectivity SDK
+  Status:                        Passed
+
+Rules with failures or warnings:
+
+Global rules:
+Warning    IsFirewallEnabled                The Windows Firewall is enabled. Make sure the appropriate ports are open to enable remote access. See the rules documentation at https://go.microsoft.com/fwlink/?linkid=2094702 for information about ports to open for each feature.
+
+Rules report file:               C:\Program Files\Microsoft SQL Server\150\Setup Bootstrap\Log\20221115_084653\SystemConfigurationCheck_Report.htm

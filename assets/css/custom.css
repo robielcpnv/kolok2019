@@ -1,0 +1,8 @@
+body { padding-top: 55px; }
+.row {margin-top: 15px;}
+h1 { margin-bottom: 20px; }
+
+a.navbar-brand { padding-top: 1px; }
+
+.offer-item img { max-height: 200px; }
+.image-item img { height: 100px; }
