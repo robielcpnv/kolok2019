@@ -4,7 +4,7 @@
     <div class="panel panel-default">
       <div class="panel-body infos">
         <span><span class="glyphicon glyphicon-map-marker"></span> <?= htmlspecialchars($offer['address']) ?></span>
-        <span class="pull-right"><span class="glyphicon glyphicon-user"></span> <a href="<?= BASE_URL;?>?page=user_offers&user=<?= htmlspecialchars($offer['author_username']) ?>"><?= htmlspecialchars() ?></a></span>
+        <span class="pull-right"><span class="glyphicon glyphicon-user"></span> <a href="<?= BASE_URL;?>?page=user_offers&user=<?= htmlspecialchars($offer['author_username']) ?>"><?= htmlspecialchars($offer['author_username']) ?></a></span>
       </div>
     </div>
     <p class="description lead bg-info alert"><?= htmlspecialchars(nl2br($offer['description'])) ?></p>
@@ -12,6 +12,7 @@
   <div class="col-md-6">
     <h2>Contacter l'auteur</h2>
     <form class="" action="<?= BASE_URL;?>?page=contact&id=<?= $offer_id ?>" method="POST">
+    <input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
       <div class="form-group">
         <textarea class="form-control" rows="8" placeholder="Votre message" name="msg"></textarea>
       </div>

@@ -14,11 +14,20 @@
       throw new Exception("Vous n'êtes pas l'auteur de cette proposition!", 403);
     }
 
-    // Destroy the offer
-    if (!destroyOffer($offer_id)) {
-      throw new Exception("La suppression de cette proposition a échouée.", 500);
-    }
+    $token = filter_input(INPUT_POST, 'token', FILTER_SANITIZE_STRING);
 
-    header("Location: " . BASE_URL ."?page=user_offers&user=" . $current_user['username']);
-    exit;
+    if (!$token || $token !== $_SESSION['token']) {
+        // return 405 http status code
+        header($_SERVER['SERVER_PROTOCOL'] . ' 405 Method Not Allowed');
+        exit;
+    } else {
+      // Destroy the offer
+      if (!destroyOffer($offer_id)) {
+        throw new Exception("La suppression de cette proposition a échouée.", 500);
+      }
+
+      
+      header("Location: " . BASE_URL ."?page=user_offers&user=" . $current_user['username']);
+      exit;
+    }  
   }

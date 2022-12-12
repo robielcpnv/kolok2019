@@ -8,9 +8,10 @@ function getCurrentUser() {
 function loginUser($username, $password) {
   if ($user = findUser($username)) {
     // Check credential
-    if (password_verify($password, $user['password']))
+    if (password_verify($password, $user['password'])){
       $_SESSION['current_user'] = $user['username'];
-    else
+      $_SESSION['token'] = md5(uniqid(mt_rand(), true));
+    }else
       $user = null;
   }
   return $user;

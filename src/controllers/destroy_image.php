@@ -13,19 +13,27 @@
     if ($current_user['username'] != $offer['author_username']) {
       throw new Exception("Vous n'êtes pas l'auteur de cette proposition!", 403);
     }
-    
-    $image = $_GET['image'];
-    
-    // Does this image belong to the offer?
-    if (!in_array($image, $offer['images'])) {
-      throw new Exception("Cette image n'existe pas dans la proposition!", 404);
-    }
 
-    // Destroy the image
-    if (!unlink(BASE_DIR . $image)) {
-      throw new Exception("La suppression de cette image a échouée.", 500);
-    }
+    $token = filter_input(INPUT_POST, 'token', FILTER_SANITIZE_STRING);
 
-    header("Location: " . BASE_URL ."?page=update_offer&id=" . $offer_id);
-    exit;
+    if (!$token || $token !== $_SESSION['token']) {
+        // return 405 http status code
+        header($_SERVER['SERVER_PROTOCOL'] . ' 405 Method Not Allowed');
+        exit;
+    } else {
+      $image = $_GET['image'];
+    
+      // Does this image belong to the offer?
+      if (!in_array($image, $offer['images'])) {
+        throw new Exception("Cette image n'existe pas dans la proposition!", 404);
+      }
+  
+      // Destroy the image
+      if (!unlink(BASE_DIR . $image)) {
+        throw new Exception("La suppression de cette image a échouée.", 500);
+      }
+  
+      header("Location: " . BASE_URL ."?page=update_offer&id=" . $offer_id);
+      exit;
+    } 
   }

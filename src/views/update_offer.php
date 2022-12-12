@@ -9,7 +9,8 @@
         <div class="thumbnail image-item">
           <img class="img-responsive" src="<?= htmlspecialchars($image) ?>" />
           <form class="caption text-center" action="<?= BASE_URL;?>?page=destroy_image&id=<?= $offer_id ?>&image=<?= htmlspecialchars($image) ?>" method="POST">
-          <button type="submit" class="btn btn-danger" <?= count(htmlspecialchars($offer['images'])) == 1 ? 'disabled="disabled"' : '' ?>>Supprimer</button>
+          <input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
+          <button type="submit" class="btn btn-danger" <?= count($offer['images']) == 1 ? 'disabled="disabled"' : '' ?>>Supprimer</button>
           </form>
         </div>
       </div>

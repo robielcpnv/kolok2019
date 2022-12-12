@@ -16,15 +16,25 @@
     if (empty(trim($message))) {
       throw new Exception("Vous devez remplir un message!", 400);
     }
-    
-    $body = "Bonjour {$target_user['name']},\n\nVoici un message concernant votre annonce: {$offer['address']} - {$offer['available_on']}\n\n{$message}";
-    $headers = "From: no-reply@kolok.com\r\n";
-    if ($current_user) {
-      $headers .= "Reply-To: {$current_user['email']}\r\n";
-    }
 
-    mail($target_user['email'], "Demande de contact pour votre annonce chez kolok", $body, $headers);
+    $token = filter_input(INPUT_POST, 'token', FILTER_SANITIZE_STRING);
+
+    if (!$token || $token !== $_SESSION['token']) {
+        // return 405 http status code
+        header($_SERVER['SERVER_PROTOCOL'] . ' 405 Method Not Allowed');
+        exit;
+    } else {
+      $body = "Bonjour {$target_user['name']},\n\nVoici un message concernant votre annonce: {$offer['address']} - {$offer['available_on']}\n\n{$message}";
+      $headers = "From: no-reply@kolok.com\r\n";
+      if ($current_user) {
+        $headers .= "Reply-To: {$current_user['email']}\r\n";
+      }
+  
+      mail($target_user['email'], "Demande de contact pour votre annonce chez kolok", $body, $headers);
+      
+      header("Location: /");
+      exit;
+    }
     
-    header("Location: /");
-    exit;
+   
   }
