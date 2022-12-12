@@ -10,8 +10,15 @@
       $images_error = "Vous devez joindre au minimum une photo";
       return;
     }
-    
-    // Store the offer
+
+    $token = filter_input(INPUT_POST, 'token', FILTER_SANITIZE_STRING);
+
+    if (!$token || $token !== $_SESSION['token']) {
+        // return 405 http status code
+        header($_SERVER['SERVER_PROTOCOL'] . ' 405 Method Not Allowed');
+        exit;
+    } else {
+         // Store the offer
     if ($id = createOffer($offer)) {
       // Now move the uploaded images
       $images_dir = offerIdToPath($id) . "/images/";
@@ -27,5 +34,6 @@
     }
     else {
       throw new Exception("Impossible d'ajouter la nouvelle proposition!", 500);
+    }
     }
   }

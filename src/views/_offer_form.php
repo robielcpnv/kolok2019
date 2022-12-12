@@ -1,4 +1,5 @@
 <form class="form-horizontal" method="post" enctype="multipart/form-data">
+<input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
   <div class="form-group <?= isset($available_on_error) ? 'has-error' : '' ?>">
     <label for="available_on" class="col-sm-2 control-label">Disponible dès le</label>
     <div class="col-sm-10">
